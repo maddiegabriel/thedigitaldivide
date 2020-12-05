@@ -10283,7 +10283,7 @@ a:focus {
 }
 
 .sidebar {
-  width: 6.5rem;
+  width: 8rem;
   min-height: 100vh;
 }
 
@@ -10414,12 +10414,12 @@ a:focus {
 .sidebar .sidebar-brand {
   height: 4.375rem;
   text-decoration: none;
-  font-size: 1rem;
-  font-weight: 800;
+  font-size: 0.95rem;
+  font-weight: 700;
   padding: 1.5rem 1rem;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 0.05rem;
+  letter-spacing: 0.03rem;
   z-index: 1;
 }
 
@@ -10432,7 +10432,7 @@ a:focus {
 }
 
 .sidebar hr.sidebar-divider {
-  margin: 0 1rem 1rem;
+  margin: 1rem 0 1rem 1rem;
 }
 
 .sidebar .sidebar-heading {
@@ -10472,7 +10472,7 @@ a:focus {
 
 @media (min-width: 768px) {
   .sidebar {
-    width: 14rem !important;
+    width: 19rem !important;
   }
   .sidebar .nav-item .collapse {
     position: relative;
@@ -10653,11 +10653,11 @@ a:focus {
 }
 
 .sidebar-dark .nav-item .nav-link {
-  color: rgba(255, 255, 255, 0.8);
+  color: white;
 }
 
 .sidebar-dark .nav-item .nav-link i {
-  color: rgba(255, 255, 255, 0.3);
+  color: white;
 }
 
 .sidebar-dark .nav-item .nav-link:active, .sidebar-dark .nav-item .nav-link:focus, .sidebar-dark .nav-item .nav-link:hover {

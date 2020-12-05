@@ -1,0 +1,17 @@
+#our-logo {
+    max-width: 14rem;
+}
+
+.page-header {
+    padding: 45px 0 20px 0;
+}
+
+.sidebar .sidebar-brand {
+    padding: 3.6rem 1rem;
+}
+
+.toggler {
+    text-align: right !important;
+    margin-right: 2rem;
+    margin-top: 15rem;
+}
