@@ -15,3 +15,10 @@
     margin-right: 2rem;
     margin-top: 15rem;
 }
+
+@media (max-width: 767px) {
+    #our-logo {
+        content: url("../img/our-logo-collapsed.png");
+        max-width: 4rem;
+    }
+}
