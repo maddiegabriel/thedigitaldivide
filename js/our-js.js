@@ -18,3 +18,23 @@ $("#sidebarToggle, #sidebarToggleTop").on('click', function(e) {
         document.getElementById("our-logo").style.maxWidth = "14rem";
     }
 });
+
+setTimeout(function(){
+    document.getElementById('img_q').src = "img/q1.png";
+},1000);
+
+setTimeout(function(){
+    document.getElementById('img_q').src = "img/q2.png";
+},2000);
+
+setTimeout(function(){
+    document.getElementById('img_q').src = "img/q3.png";
+},3000);
+
+setTimeout(function(){
+    document.getElementById('img_q').src = "img/q4.png";
+},4000);
+
+setTimeout(function(){
+    document.getElementById('img_q').src = "img/q5.png";
+},5000);
