@@ -36,7 +36,7 @@
 }
 
 .card-header-data {
-    background-color: #ffffff;
+    background-color: #ffffff !important;
     border-bottom: none;
 }
 
