@@ -38,3 +38,141 @@ setTimeout(function(){
 setTimeout(function(){
     document.getElementById('img_q').src = "img/q5.png";
 },5000);
+
+Highcharts.chart('chart-container-math', {
+
+    chart: {
+        type: 'boxplot'
+    },
+
+    title: {
+        text: 'Average NAEP mathematics scale score of 4th and 8th-graders,<br>by whether student has access to the Internet at home (2019).'
+    },
+
+    legend: {
+        enabled: true
+    },
+
+    xAxis: {
+        categories: ['4th Graders', '8th Graders'],
+        title: {
+            text: 'Student Group'
+        }
+    },
+
+    yAxis: {
+        title: {
+            text: 'Observations'
+        },
+        plotLines: [{
+            value: 932,
+            color: 'red',
+            width: 1,
+            label: {
+                text: 'Theoretical mean: 932',
+                align: 'center',
+                style: {
+                    color: 'gray'
+                }
+            }
+        }]
+    },
+
+    series: [
+    {
+        name: 'Observation',
+        data: [
+            [760, 801, 848, 895, 965],
+            [733, 853, 939, 980, 1080]
+        ],
+        tooltip: {
+            headerFormat: '<em>{point.key}</em><br/>'
+        }
+    },
+    {
+        name: 'Outliers',
+        color: Highcharts.getOptions().colors[0],
+        type: 'scatter',
+        data: [ // x, y positions where 0 is the first category
+            [0, 644],
+        ],
+        marker: {
+            fillColor: 'white',
+            lineWidth: 1,
+            lineColor: Highcharts.getOptions().colors[0]
+        },
+        tooltip: {
+            pointFormat: 'Observation: {point.y}'
+        }
+    }]
+
+});
+
+Highcharts.chart('chart-container-reading', {
+
+    chart: {
+        type: 'boxplot'
+    },
+
+    title: {
+        text: 'Average NAEP mathematics scale score of 4th and 8th-graders,<br>by whether student has access to the Internet at home (2019).'
+    },
+
+    legend: {
+        enabled: true
+    },
+
+    xAxis: {
+        categories: ['4th Graders', '8th Graders'],
+        title: {
+            text: 'Student Group'
+        }
+    },
+
+    yAxis: {
+        title: {
+            text: 'Observations'
+        },
+        plotLines: [{
+            value: 932,
+            color: 'red',
+            width: 1,
+            label: {
+                text: 'Theoretical mean: 932',
+                align: 'center',
+                style: {
+                    color: 'gray'
+                }
+            }
+        }]
+    },
+
+    series: [
+    {
+        name: 'Observation',
+        data: [
+            [760, 801, 848, 895, 965],
+            [733, 853, 939, 980, 1080]
+        ],
+        tooltip: {
+            headerFormat: '<em>{point.key}</em><br/>'
+        }
+    },
+    {
+        name: 'Outliers',
+        color: Highcharts.getOptions().colors[1],
+        type: 'scatter',
+        data: [ // x, y positions where 0 is the first category
+            [0, 644],
+        ],
+        marker: {
+            fillColor: 'white',
+            lineWidth: 1,
+            lineColor: Highcharts.getOptions().colors[0]
+        },
+        tooltip: {
+            pointFormat: 'Observation: {point.y}'
+        }
+    }]
+
+});
