@@ -19,6 +19,7 @@
     <!-- Custom styles for this template-->
     <link href="../css/sb-admin-2.css" rel="stylesheet">
     <link href="../css/our-style.css" rel="stylesheet">
+    <link href="../css/dashboard/q3BoxPlot.css" rel="stylesheet">
 
 </head>
 
@@ -119,6 +120,21 @@
                 <!-- Content Row -->
                 <div class="row">
 
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="card shadow mb-4">
+                            <!-- Card Header - Dropdown -->
+                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <h6 class="m-0 font-weight-bold text-primary">Low-Income Student Study Time Overview</h6>
+                            </div>
+                            <!-- Card Body -->
+                            <div class="card-body">
+                                <figure class="highcharts-figure">
+                                    <div id="container"></div>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Study Time Cards  -->
                     <div class="col-x6 col-md-6 mb-4">
                         <div class="card border-left-primary shadow h-100 py-2">
@@ -139,11 +155,11 @@
                     </div>
 
                     <div class="col-xl-6 col-md-6 mb-4">
-                        <div class="card border-left-success shadow h-100 py-2">
+                        <div class="card border-left-primary shadow h-100 py-2">
                             <div class="card-body">
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                             Average Time Spent Studying during COVID (hours)
                                         </div>
                                         <div class="h5 mb-0 font-weight-bold text-gray-800">4.58</div>
@@ -163,22 +179,7 @@
                         <div class="card shadow mb-4">
                             <!-- Card Header - Dropdown -->
                             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                <h6 class="m-0 font-weight-bold text-primary">Low-Income Student Study Time
-                                    Overview</h6>
-                                <div class="dropdown no-arrow">
-                                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                         aria-labelledby="dropdownMenuLink">
-                                        <div class="dropdown-header">Dropdown Header:</div>
-                                        <a class="dropdown-item" href="#">Action</a>
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#">Something else here</a>
-                                    </div>
-                                </div>
+                                <h6 class="m-0 font-weight-bold text-primary">Average Low-Income Student Study Time</h6>
                             </div>
                             <!-- Card Body -->
                             <div class="card-body">
@@ -246,12 +247,13 @@
                                     <h6 class="m-0 font-weight-bold text-primary">Methodology</h6>
                                 </div>
                                 <div class="card-body">
-                                    <p>For this question, we gathered data regarding study time for students from the
-                                        Institute for Financial Studies and the Organisation for Economic Cooperation
-                                        and Development. To determine if the significance between the mean of study time
-                                        before vs during COVID-19 was statistically significant, we used Welch's Two Sample
-                                        T-Test. We chose this because it is more reliable when you have unequal variances
-                                        or sample sizes.</p>
+                                    <p>To answer this question, we performed Welch's two sample T-Test to compare the average
+                                        academic performance of low SES from before the pandemic to during. Our null hypothesis,
+                                        is that the average time spent studying between the pre-pandemic and during pandemic
+                                        group is equal. Our alternative hypothesis is that the average time spent studying between
+                                        the two groups is statistically significantly different. We used this method because we felt
+                                        it was the most appropriate way to determine if there is a significant difference between the
+                                        means of the two groups.</p>
                                 </div>
                             </div>
                         </div>
@@ -264,11 +266,33 @@
                                 </div>
                                 <div class="card-body">
                                     <p>Our results indicate that the true difference in means is not equal to 0. The
-                                        study time for low-income populations has changed as a result of COVID-19 school
-                                        disruptions. The results of this question will be analyzed alongside the results
-                                        of Question 4 and 5 to determine if academic performance of students changed as a
-                                        result of COVID-19 and if low-income populations are more vulnerable to changes than
+                                        study time for low-income populations has increased as a result of COVID-19 school
+                                        disruptions, and is considered statistically significant.
+                                        The results of this question will be analyzed alongside the results of Question 4
+                                        and 5 to determine if the study time of lower income households is statistically different
+                                        than non-lower income households and if low-income populations are more vulnerable to changes than
                                         their higher income counterparts.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 mb-2">
+                            <!-- Results -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Limitations</h6>
+                                </div>
+                                <div class="card-body">
+                                    <p>One major limitation of this source is that we had unequal sample sizes for the
+                                        pre COVID and during COVID populations. Although we had substantial data points for
+                                        pre COVID, the during COVID group only had 4 observations. We could have greater confidence
+                                        in our study with a larger sample size.</p>
+                                    <p>A second limitation is that we used two different sources to gather data regarding study time
+                                        before vs during COVID. These two sources had differences in data collection methodology, and had slight
+                                        differences in what qualifies as study time.</p>
+                                    <p>Finally, these sources were also international as opposed to Canada specific. The IFS data was primarily
+                                        from the UK, and the OECD drew from a variety of international countries including the UK and Canada.
+                                        This makes it more challenging to apply the findings to a Canadian context.</p>
                                 </div>
                             </div>
                         </div>
@@ -282,16 +306,15 @@
                                 <div class="card-body">
                                     <p>Andrew, Alison, et al. “Learning During the Lockdown: Real-Time Data on
                                         Children’s Experiences during Home Learning.” <i>Institute for Financial
-                                            Studies</i>, (2020): 1-23.</p>
+                                            Studies</i>, (2020): 1-23. doi: 10.1920/BN.IFS.2020.BN0288.</p>
                                     <p>“Does Homework Perpetuate Inequalities in Education.” <i>Organisation for
-                                        Economic Cooperation and Development</i>, (2012): 1-4.</p>
+                                        Economic Cooperation and Development</i>, (2012): 1-4. https://doi.org/10.1787/5jxrhqhtx2xt-en.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- /.container-fluid -->
         </div>
         <!-- End of Main Content -->
 
@@ -332,6 +355,13 @@
 
 <!-- Page level custom scripts -->
 <script src="../js/dashboard/question3.js"></script>
+<script src="../js/dashboard/q3BoxPlot.js"></script>
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
 </body>
 
