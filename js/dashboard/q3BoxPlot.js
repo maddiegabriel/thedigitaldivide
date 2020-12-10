@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
 
         title: {
-            text: 'Low-Income Study Time Box Plot'
+            text: ""
         },
 
         legend: {
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
 
         xAxis: {
-            categories: ['Pre-Covid', 'Covid'],
+            categories: ['Pre-Covid', 'During Covid'],
             title: {
                 text: 'Covid Status'
             }
@@ -39,16 +39,6 @@ document.addEventListener('DOMContentLoaded', function () {
         },
 
         series: [{
-            name: 'Observations',
-            // data:
-            //     [
-            //         [4.3, 3.6, 3.6, 4.9, 3.0, 2.6, 4.0, 6.7, 2.4, 3.4, 3.9, 3.6, 4.4, 3.8, 5.3, 4.2, 5.6, 2.1, 1.7, 4.0, 4.3, 4.1, 3.1, 4.1, 6.5, 3.1, 2.5,2.8, 6.0, 3.0, 3.5, 4.0, 3.6, 4.5],
-            //         [4.4,4.6,4.7,4.6]
-            //     ],
-            // tooltip: {
-            //     headerFormat: '<em>Experiment No {point.key}</em><br/>'
-            // }
-        },{
             name: 'Student',
             color: Highcharts.getOptions().colors[0],
             type: 'scatter',
