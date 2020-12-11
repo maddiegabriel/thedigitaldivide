@@ -81,3 +81,32 @@
 .thead-light th {
     background-color: #f5f7ff !important;
 }
+
+.border-left-pink {
+    border-left: 0.25rem solid #e83e8c !important;
+}
+
+.border-left-orange {
+    border-left: 0.25rem solid #fd7e14 !important;
+}
+
+.border-left-green {
+    border-left: 0.25rem solid #1cc88a !important;
+}
+
+.border-left-blue {
+    border-left: 0.25rem solid #36b9cc !important;
+}
+
+.text-pink {
+    color: #e83e8c !important;
+}
+.text-orange {
+    color: #fd7e14 !important;
+}
+.text-green {
+    color: #1cc88a !important;
+}
+.text-blue {
+    color: #36b9cc !important;
+}
