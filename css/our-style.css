@@ -77,3 +77,7 @@
 .highcharts-data-table tr:hover {
     background: #f1f7ff;
 }
+
+.thead-light th {
+    background-color: #f5f7ff !important;
+}

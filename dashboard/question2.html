@@ -19,6 +19,7 @@
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>    
+	<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
 
     <!-- Custom styles for this template-->
     <link href="../css/sb-admin-2.css" rel="stylesheet">
@@ -123,35 +124,125 @@
                     <!-- QUESTION INTRO -->
                     <div class="row">
 
-                        <div class="col-xl-8 col-md-6 mb-4">
+                        <div class="col-xl-6 col-md-12 mb-4">
                             <div class="card shadow mb-0">
                                 <div class="card-header py-3">
-                                    <h5 class="m-0 font-weight-bold text-primary">Background</h5>
+                                    <h5 class="h4 m-0 font-weight-bold text-primary">Question Background</h5>
                                 </div>
                                 <div class="card-body">
                                     <p>
-                                        In March 2020, the COVID-19 lockdown led to <b>mass school closures</b> all across Canada and the world. Millions of school children were sent home to complete their school year <b>online</b>. In September, many provinces saw students return to school with the option to continue their learning online.<br><br>“While learning might continue unimpeded for children from higher income households, children from lower-income households are likely to struggle to complete homework and online courses”. A student’s ability to succeed in an online learning environment is impacted by many parameters, including their <b>digital access</b>. This dashboard examines the impact of a student's digital access on their academic performance.
+                                        In March 2020, the COVID-19 lockdown led to <b>mass school closures</b> all over the world. Millions of children were sent home to complete their school year <b>online</b>. A student’s ability to succeed in an online learning environment is impacted by many parameters, including their <b>digital access</b>. This dashboard examines the impact of a student's digital access on their academic performance.
                                     </p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-xl-4 col-md-6 mb-4">
+                        <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-info shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="h5 font-weight-bold text-info mb-1">Definition of Terms</div>
-                                            <div class="h6 mb-0">
-                                                <br>In our context, <b>digital access</b> is defined as having access to the Internet at home.<br>
-                                                <b>Academic performance</b> is measured by the average NAEP test scores.
-                                            </div>
-                                            <div class="text-center">
-                                                <br>
-                                                <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 15rem;" src="../img/undraw_posting_photo.svg" alt="">
+                                            <div class="h4 font-weight-bold text-info mb-1">Digital Access</div>
+                                            <div class="h5 mb-0">
+                                                <br>is defined as having access to the Internet at home.<br><br>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-warning shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="h4 font-weight-bold text-warning mb-1">Academic Performance</div>
+                                            <div class="h5 mb-0">
+                                                <br>is measured by average NAEP test scores.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DATA TABLE -->
+                    <div class="row">
+                        <div class="col-xl-12 col-md-12 mb-4">
+                            <div class="accordion" id="accordionExample">
+                                <div class="card shadow">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <div class="card-header card-header-data py-3" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <h3 class="m-0 font-weight-bold text-primary">View Table of Data Means</h3>
+                                            </h2>
+                                        </div>
+                                    </button>
+                                  <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered table-hover text-center" id="dataTable" width="100%" cellspacing="0">
+                                                <thead class="thead-light">
+                                                    <tr>
+                                                        <th rowspan="3">Selected Characteristic</th>
+                                                        <th colspan="3">Average Scale Score (0 - 500)</th>
+                                                        <th colspan="2">Percentage Distribution of Students</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th rowspan="2">All Students</th>
+                                                        <th colspan="2">Has Access to the Internet at Home</th>
+                                                        <th colspan="2">Has Access to the Internet at Home</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Yes</th>
+                                                        <th>No</th>
+                                                        <th>Yes</th>
+                                                        <th>No</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Grade 4 Reading</td>
+                                                        <td>220 (0.2)</td>
+                                                        <td>224 (0.2)</td>
+                                                        <td>195 (0.6)</td>
+                                                        <td>90 (0.2)</td>
+                                                        <td>10 (0.2)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Grade 8 Reading</td>
+                                                        <td>263 (0.3)</td>
+                                                        <td>264 (0.3)</td>
+                                                        <td>234 (1.1)</td>
+                                                        <td>97 (0.1)</td>
+                                                        <td>3 (0.1)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Grade 4 Mathematics</td>
+                                                        <td>241 (0.2)</td>
+                                                        <td>243 (0.2)</td>
+                                                        <td>223 (0.7)</td>
+                                                        <td>90 (0.1)</td>
+                                                        <td>10 (0.1)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Grade 8 Mathematics</td>
+                                                        <td>220 (0.2)</td>
+                                                        <td>283 (0.3)</td>
+                                                        <td>257 (1.1)</td>
+                                                        <td>97 (0.2)</td>
+                                                        <td>3 (0.2)</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p class="text-xs">
+                                            Source: <a href="https://nces.ed.gov/" target="_blank">https://nces.ed.gov/</a>.<br>
+                                            Standard errors appear in parentheses.</p>
+                                        </div>
+                                    </div>
+                                  </div>
                                 </div>
                             </div>
                         </div>
@@ -164,12 +255,11 @@
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="h5 font-weight-bold text-success text-uppercase mb-1">
-                                                NAEP</div>
+                                            <div class="h4 font-weight-bold text-success text-uppercase mb-1">
+                                                NAEP?</div>
                                             <div class="h6 mb-0">
                                                 <br>
                                                 The <a href="https://nces.ed.gov/nationsreportcard/about/" target="_blank"><b>NAEP</b></a> (National Assessment of Educational Progress) is a <b>standardized test</b> measuring the proficiency of U.S. students in various academic subjects. Commonly known as “The Nation’s Report Card”, this is a congressionally mandated project administered by the <b>U.S Department of Education</b>.
-                                                The NAEP is administered during school hours to a <b>representative sample</b> of students from public/nonpublic schools across the country. Students are provided with all necessary materials and technology.
                                             </div>
                                         </div>
                                     </div>
@@ -179,112 +269,17 @@
                         <div class="col-xl-8 col-md-6 mb-0">
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h5 class="m-0 font-weight-bold text-primary">The Data</h5>
+                                    <h5 class="h4 m-0 font-weight-bold text-primary">The Data</h5>
                                 </div>
                                 <div class="card-body">
                                     <p>
-                                        We examined the <b>2019 NAEP results</b> for <b>Grade 4 and 8</b> students at the <b>national</b> level. The dataset being examined is composed of the average NAEP test scores on a <b>scale from 0 to 500</b> in the subject areas of <b>Reading</b> and <b>Mathematics</b>. The population is divided into <b>2 categories</b>: Has access to the Internet at home and Does not have access to the Internet at home.<br><br>
-                                        Along with their test, students are asked to complete a survey questionnaire asking a variety of demographic questions, including one asking whether they have Internet access at home. NAEP results are then reported for groups of students with similar characteristics (e.g. gender, race, home Internet access), not for individual students. National results are available for all subjects assessed by NAEP through the National Center for Education Statistics website.
+                                        We examined the <b>2019 NAEP results</b> for <b>Grade 4 and 8</b> students at the <b>national</b> level. The dataset being examined is composed of the average NAEP test scores on a <b>scale from 0 to 500</b> in the subject areas of <b>Reading</b> and <b>Mathematics</b>. NAEP results are then reported for groups of students with similar characteristics (e.g. gender, race, home Internet access), not for individual students.
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- DATA TABLE -->
-                    <div class="row">
-                        <div class="col-xl-12 col-md-12 mb-4">
-                            <div class="accordion" id="accordionExample">
-                                <div class="card">
-                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        <div class="card-header card-header-data py-3" id="headingOne">
-                                            <h2 class="mb-0">
-                                                <h4 class="m-0 font-weight-bold text-primary">View Data Tables</h4>
-                                            </h2>
-                                        </div>
-                                    </button>
-                                  <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                        <div class="card-body">
-                                        <div class="table-responsive">
-                                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Name</th>
-                                                        <th>Position</th>
-                                                        <th>Office</th>
-                                                        <th>Age</th>
-                                                        <th>Start date</th>
-                                                        <th>Salary</th>
-                                                    </tr>
-                                                </thead>
-                                                <tfoot>
-                                                    <tr>
-                                                        <th>Name</th>
-                                                        <th>Position</th>
-                                                        <th>Office</th>
-                                                        <th>Age</th>
-                                                        <th>Start date</th>
-                                                        <th>Salary</th>
-                                                    </tr>
-                                                </tfoot>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>Michael Silva</td>
-                                                        <td>Marketing Designer</td>
-                                                        <td>London</td>
-                                                        <td>66</td>
-                                                        <td>2012/11/27</td>
-                                                        <td>$198,500</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Paul Byrd</td>
-                                                        <td>Chief Financial Officer (CFO)</td>
-                                                        <td>New York</td>
-                                                        <td>64</td>
-                                                        <td>2010/06/09</td>
-                                                        <td>$725,000</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Gavin Joyce</td>
-                                                        <td>Developer</td>
-                                                        <td>Edinburgh</td>
-                                                        <td>42</td>
-                                                        <td>2010/12/22</td>
-                                                        <td>$92,575</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Jennifer Chang</td>
-                                                        <td>Regional Director</td>
-                                                        <td>Singapore</td>
-                                                        <td>28</td>
-                                                        <td>2010/11/14</td>
-                                                        <td>$357,650</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Brenden Wagner</td>
-                                                        <td>Software Engineer</td>
-                                                        <td>San Francisco</td>
-                                                        <td>28</td>
-                                                        <td>2011/06/07</td>
-                                                        <td>$206,850</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Donna Snider</td>
-                                                        <td>Customer Support</td>
-                                                        <td>New York</td>
-                                                        <td>27</td>
-                                                        <td>2011/01/25</td>
-                                                        <td>$112,000</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                  </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     
                     <!-- METHOD -->
                     <div class="row">
@@ -293,11 +288,14 @@
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="h5 font-weight-bold text-info mb-1">The Method: T-Test</div>
-                                            <div class="h6 mb-0 text-gray-800">description of what a t-test is with links</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                            <div class="h5 font-weight-bold text-info mb-1"><b>Methodology:</b> Idependent Samples T-Test</div>
+                                            <div class="h6 mb-0 text-gray-800">
+                                                <br>
+                                                A <b>t-test</b> is a popular method of data analysis used to determine if the difference between two means is <b>statistically significant</b>.
+                                                We used an <b>independent samples t-test</b> to compare the mean NAEP subject scores of students in <b>two independent categories</b>: those who have Internet access at home and those who do not.
+                                                The response (<i>dependent variable</i>) is the students' mean NAEP test score.
+                                                We performed a separate test for each subject being studied: Mathematics and Reading. Using this method has allowed us to determine that the observed difference in mean academic performance did not happen by chance; the difference is significant and could be used to prove that digital access has an impact on academic performance.
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -305,57 +303,79 @@
                         </div>
                     </div>
 
-                    <!-- Results: Box Plots -->
+                    <!-- RESULTS: Math Box Plot -->
                     <div class="row">
                         <!-- Area Chart -->
-                        <div class="col-xl-6 col-lg-6">
+                        <div class="col-xl-8 col-lg-6">
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h5 class="m-0 font-weight-bold text-primary">Results: Math Scores</h5>
+                                    <h5 class="m-0 font-weight-bold text-primary"><b>Results:</b> Math Scores</h5>
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
-                                    <figure class="highcharts-figure">
-                                        <div id="chart-container-math"></div>
-                                        <p class="highcharts-description">
-                                            Different visualizations of the data that help to answer each of your questions.
-                                            There should be information provided with each visualization that interprets
-                                            what the reader is viewing, as well as links to all data sources used. It should
-                                            also describe any limitations.
-                                            The p value for each of the following T-Tests was very small (p-value < 2.2e-16).
-                                            This shows that there is indeed a significant difference between the mean NAEP test scores of American students who have access to the Internet at home and students who do not. On average, the students with access to the Internet at home performed significantly better academically than those who do not. This finding was consistent across both subject areas studied (mathematics & reading), as well as all age groups studied (grades 4 & 8).
-                                            Visually, the orange block represents the mean test scores of students who have access to the internet and the red block represents those who do not. You can see that in each plot, the orange block is further to the right meaning that population category has a higher mean test score.
-                                        </p>
-                                    </figure>
-                                </div>
+                                    <div id="grade-4-math"></div>
+                                </div>                    
                             </div>
                         </div>
-                        <div class="col-xl-6 col-lg-6">
+
+                        <div class="col-xl-4 col-lg-6">
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h5 class="m-0 font-weight-bold text-primary">Results: Reading Scores</h5>
+                                    <h5 class="m-0 font-weight-bold text-primary"><b>Interpretation</b></h5>
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
-                                    <figure class="highcharts-figure">
-                                        <div id="chart-container-reading"></div>
-                                        <p class="highcharts-description">
-                                            Different visualizations of the data that help to answer each of your questions.
-                                            There should be information provided with each visualization that interprets
-                                            what the reader is viewing, as well as links to all data sources used. It should
-                                            also describe any limitations.
-                                        </p>
-                                    </figure>
+                                	<p>
+                                        The p value for each of the following T-Tests was very small (p-value < 2.2e-16).
+                                        This shows that there is indeed a significant difference between the mean NAEP test scores of American students who have access to the Internet at home and students who do not. On average, the students with access to the Internet at home performed significantly better academically than those who do not. This finding was consistent across both subject areas studied (mathematics & reading), as well as all age groups studied (grades 4 & 8).
+                                         block represents those who do not. You can see that in each plot, the orange block is further to the right meaning that population category has a higher mean test score.
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Results: relate back to question -->
+                    <!-- RESULTS: Reading Box Plot -->
+                    <div class="row">
+                        <!-- Area Chart -->
+                        <div class="col-xl-8 col-lg-6">
+                            <div class="card shadow mb-4">
+                                <!-- Card Header - Dropdown -->
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h5 class="m-0 font-weight-bold text-primary"><b>Results:</b> Math Scores</h5>
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <div id="grade-8-reading"></div>
+                                </div>                    
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-6">
+                            <div class="card shadow mb-4">
+                                <!-- Card Header - Dropdown -->
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h5 class="m-0 font-weight-bold text-primary"><b>Interpretation</b></h5>
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                	<p>
+                                        The p value for each of the following T-Tests was very small (p-value < 2.2e-16).
+                                        This shows that there is indeed a significant difference between the mean NAEP test scores of American students who have access to the Internet at home and students who do not. On average, the students with access to the Internet at home performed significantly better academically than those who do not. This finding was consistent across both subject areas studied (mathematics & reading), as well as all age groups studied (grades 4 & 8).
+                                         block represents those who do not. You can see that in each plot, the orange block is further to the right meaning that population category has a higher mean test score.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- FINDINGS: relate back to question -->
                     <div class="row">
 
                         <div class="col-lg-12 mb-4">
@@ -366,10 +386,10 @@
                                     <h6 class="h5 m-0 font-weight-bold text-success">Findings</h6>
                                 </div>
                                 <div class="card-body">
-                                    <br><br><br>
                                     <p>
                                         Going back to the original question, the results for this data analysis show that personal digital access can indeed impact student academic performance.
                                         An obvious limitation of these findings is that the data is for students in the U.S, not Canada. We used U.S. data because the U.S. has more standardized tests to measure academic performance than Canada.
+                                        The largest limitation of this dataset is that it applies to a population of students in the U.S., however our project aims to examine the impact of COVID-19 on lower income Canadian families. While both countries are in North America, the education systems as well as levels of digital access for lower income citizens in Canada and the U.S. may vary significantly. Additionally, for this question, digital access is measured by having access to the Internet at home. In Question 1, it was measured as an aggregate value of Internet access at home and access to a personal smartphone, which is a slightly different metric. Lastly, this dataset has fairly unequal sampling between the two categories of students being assessed. There is a large difference in sample size between the sample size of students with digital access (approximately 90% of the population) and those without (approximately 10% of the population). 
                                     </p>
                                 </div>
                             </div>
@@ -420,6 +440,7 @@
     <!-- Page level custom scripts -->
     <script src="../js/demo/chart-area-demo.js"></script>
     <script src="../js/demo/chart-pie-demo.js"></script>
+    <script src="../js/dashboard/question2.js"></script>
 
 </body>
 
