@@ -288,27 +288,23 @@
                             <!-- Project Card Example -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h2 class="m-0 font-weight-bold text-primary">The Source</h2>
+                                        <h2 class="h4 m-0 font-weight-bold text-primary"><b>The Source:</b> <a href="https://www23.statcan.gc.ca/imdb/p2SV.pl?Function=getSurvey&SDDS=4432#a2" target="_blank">Canadian Internet Usage Survey from StatCan</a></h2>
                                 </div>
                                 <div class="card-body">
-                                    <h4 class="m-0 font-weight-bold text-secondary"> 
-                                        <a href="https://www23.statcan.gc.ca/imdb/p2SV.pl?Function=getSurvey&SDDS=4432#a2">Canadian Internet Usage Survey from Statistics Canada</a>
-                                    </h4>
-                                    <img style="width:60%" src="../img/StatCan.png"/>
+                                    <h6 class="m-0 mt-2 font-weight-bold text-info">Target Population</h6>
+                                    <ul><li>All persons 15 years of age and older living in the ten provinces of Canada.</p></li></ul>
+                                    <h6 class="m-0 font-weight-bold text-info">Data Collection</h6>
+                                    <ul><li>Sample survey with a cross-sectional design<br/></li>
+                                        <li>Meaning: multiple groups from different provinces, age groups, and household income quartiles were surveyed in similar proportions</li></ul>
+                                    <h6 class="m-0 font-weight-bold text-info">Survey Design</h6>
+                                    <ul><li>Responding to this survey is voluntary.</li>
+                                        <li>Data are collected directly from survey respondents.</li>
+                                        <li>Data are collected through an electronic questionnaire or computer assisted telephone interviewing</li></ul>
                                     <br/>
-                                    <h6 class="m-0 font-weight-bold text-green">Target population</h6>
-                                    <p>&emsp;* All persons 15 years of age and older living in the ten provinces of Canada.</p>
                                     <br/>
-                                    <h6 class="m-0 font-weight-bold text-green">Data Collection</h6>
-                                    <p>&emsp;* Sample survey with a cross-sectional design<br/>
-                                        &emsp;* meaning multiple groups from different provinces, age groups, and household income quartiles were asked in similar proportions
-                                    </p>
+                                    <img style="width:70%; margin-left: 15px" src="../img/StatCan.png"/>
                                     <br/>
-                                    <h6 class="m-0 font-weight-bold text-green">Survey Design</h6>
-                                    <p>&emsp;* Responding to this survey is voluntary. <br/>
-                                        &emsp;* Data are collected directly from survey respondents. <br/>
-                                        &emsp;* Data are collected through an electronic questionnaire or computer assisted telephone interviewing<br/>
-                                    </p>
+                                    <br/>
                                     <br/>
                                 </div>
                             </div>
@@ -321,14 +317,11 @@
                                     <h4 class="m-0 font-weight-bold text-pink">The Limitations</h4>
                                 </div>
                                 <div class="card-body">
-                                    <h6 class="m-0 font-weight-bold text-orange">Electronic Questionnaire to Evaluate Digital Access</h6>
-                                    <p>&emsp;* Collecting data digitally could skew response volume towards digitally active users <br/>
-                                    </p>
+                                    <h6 class="m-0 font-weight-bold text-orange">Electronic Questionnaire</h6>
+                                    <p class="m-0">Collecting data digitally to evaluate digital access could skew response volume towards digitally active users.<br/>
                                     <br/>
-
                                     <h6 class="m-0 font-weight-bold text-orange">Stratified Random Sampling</h6>
-                                    <p>&emsp;* To address the possible skew, the data is collected from each group independently. <br/> 
-                                        &emsp;* This keeps data volumes proportional by category and reduces variance <br/>
+                                    <p>To address the possible skew, the data is collected from each group independently. This keeps data volumes proportional by category and reduces variance.<br/>
                                     </p>
                                     <img style="width: 100%" src="../img/StratifiedRandomSampling.jpg"/>
                                 </div>
@@ -338,44 +331,39 @@
 
                     <!-- Analysis Row -->
                     <div class="row">
-
-                        <!-- Content Column -->
-                        <div class="col-lg-8 mb-4">
-
-                            <!-- Project Card Example -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h2 class="m-0 font-weight-bold text-primary"><b>The Method:</b> Multinomial Logistic Regression</h2>
-                                </div>
-                                <div class="card-body">
-                                    <img style="width: 100%" src="../img/Multinomial-Logistic-Regression-model.jpg">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 mb-4">
-
+                        <div class="col-lg-6 mb-4">
                             <!-- Project Card Example -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
                                     <h4 class="m-0 font-weight-bold text-primary">How It Works</h4>
                                 </div>
-                                <div class="card-body">
-                                    <h5>* Multionomial Logistic Regression is at heart a Classifer
-                                        <br/>
-                                        <br/>
-                                        * The model trains itself on existing data, in our case: <br/>
-                                        &emsp; * Internet Access<br/>
-                                        &emsp; * Online Shopping Metrics<br/>
-                                        &emsp; * Social Networking Usage<br/>
-                                        <br/>
-                                        * From this data it identifies patterns in what the data LOOKS like
-                                            when it comes from a certain category <br/> <br/>
-                                        * Once the model is trained, when new data is presented - in our case, the data would 
+                                <div class="card-body m-0">
+                                    <h6>Multionomial Logistic Regression is, at heart, a <b>classifer</b>.<br/> <br/>
+                                        The model <b>trains itself</b> using existing data, in our case: <br/>
+                                        <ul><li>Internet Access</li>
+                                            <li>Online Shopping Metrics</li>
+                                            <li>Social Networking Usage</li></ul>
+                                        From this data, it <b>identifies patterns</b> in what the data <i>looks like</i> when it comes from a certain category.<br><br>
+                                        Once the model is trained and the new data is presented (in our case, the data would 
                                             be the percentage of households in a geographical area
-                                            that have internet access at home - the model can calculate a percent chance that that region 
-                                            is a low, second, third, or highest income quartile area <br/> <br/>
-                                        * It will then categorize that data - select the highest percentage category - and give that answer back to us <br/> <br/>
-                                    </h5>
+                                            that have internet access at home) the model can <b>calculate</b> a percent chance that a region 
+                                            is a low, second, third, or highest income quartile area.<br/> <br/>
+                                        It will then <b>categorize</b> that data (select the highest percentage category) and give that answer back to us.
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Content Column -->
+                        <div class="col-lg-6 mb-4">
+                            <!-- Project Card Example -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h2 class="h4 m-0 font-weight-bold text-primary"><b>The Method:</b> Multinomial Logistic Regression</h2>
+                                </div>
+                                <div class="card-body">
+                                    <br>
+                                    <img style="width: 100%" src="../img/Multinomial-Logistic-Regression-model.jpg">
+                                    <br><br>
                                 </div>
                             </div>
                         </div>
@@ -467,30 +455,30 @@
                             <!-- Project Card Example -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h2 class="m-0 font-weight-bold text-primary">References</h2>
+                                    <h4 class="m-0 font-weight-bold text-primary">References</h2>
                                 </div>
                                 <div class="card-body">
                                     <p>
                                         Thomas, Lauren. "What is a Cross-Sectional Study." Scribbr, last modified June 5, 2020.<br/>&emsp;
-                                        <a href="www.scribbr.com/methodology/cross-sectional-study/?fbclid=IwAR3W0hzWK5aKVi_w4TQHjXr5rnxxtgCvrP8vzSSN8QFUK8tanq1GKZhntlY">
+                                        <a target="_blank" href="www.scribbr.com/methodology/cross-sectional-study/?fbclid=IwAR3W0hzWK5aKVi_w4TQHjXr5rnxxtgCvrP8vzSSN8QFUK8tanq1GKZhntlY">
                                             www.scribbr.com/methodology/cross-sectional-study/?fbclid=IwAR3W0hzWK5aKVi_w4TQHjXr5rnxxtgCvrP8vzSSN8QFUK8tanq1GKZhntlY.
                                         </a>
                                     </p>
                                     <p>
                                         Polamuri, Saimadhu. “How the Multinomial Logistic Regression Model Works.” Open Data Science, published March 31, 2017.<br/>&emsp;
-                                        <a href="www.opendatascience.com/how-the-multinomial-logistic-regression-model-works/?fbclid=IwAR1IFF2QSkHMnSfa68J20Y-Hn7HsyNmO0ZSzkdeNTF-uO7R8HL1zEm6on6c">
+                                        <a target="_blank" href="www.opendatascience.com/how-the-multinomial-logistic-regression-model-works/?fbclid=IwAR1IFF2QSkHMnSfa68J20Y-Hn7HsyNmO0ZSzkdeNTF-uO7R8HL1zEm6on6c">
                                             www.opendatascience.com/how-the-multinomial-logistic-regression-model-works/?fbclid=IwAR1IFF2QSkHMnSfa68J20Y-Hn7HsyNmO0ZSzkdeNTF-uO7R8HL1zEm6on6c.
                                         </a>
                                     </p>
                                     <p>
                                         Xie, Wilson. “Multinomial Logistic Regression in a Nutshell.” Medium, published December 8, 2020.<br/>&emsp;
-                                        <a href="www.medium.com/ds3ucsd/multinomial-logistic-regression-in-a-nutshell-53c94b30448f">
+                                        <a target="_blank" href="www.medium.com/ds3ucsd/multinomial-logistic-regression-in-a-nutshell-53c94b30448f">
                                             www.medium.com/ds3ucsd/multinomial-logistic-regression-in-a-nutshell-53c94b30448f.
                                         </a>
                                     </p>
                                     <p>
                                         “Use of Internet services and technologies by age group and household income quartile,” <br>&emsp;
-                                        <a href="https://www150.statcan.gc.ca/t1/tbl1/en/cv.action?pid=2210011301">
+                                        <a target="_blank" href="https://www150.statcan.gc.ca/t1/tbl1/en/cv.action?pid=2210011301">
                                             Statistics Canada. 2020. https://www150.statcan.gc.ca/t1/tbl1/en/cv.action?pid=2210011301.
                                         </a>
                                     </p>
