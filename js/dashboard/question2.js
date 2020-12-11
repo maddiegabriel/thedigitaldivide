@@ -19,9 +19,10 @@ var grade4_math_no = {
 var data1 = [grade4_math_no, grade4_math_yes];
 
 var layout1 = {
-    title: 'Average NAEP mathematics scale score of 4th graders,<br>by whether student has access to the Internet at home (2019).',
+    title: 'Average NAEP mathematics scale score of 4th-graders,<br>by whether student has access to the Internet at home (2019).',
     xaxis: {
-        autorange: true
+        autorange: true,
+        title: 'Mathematics scale score (0 - 500)'
     },
     showlegend: false,
 };
@@ -50,9 +51,10 @@ var grade8_reading_no = {
 var data2 = [grade8_reading_no, grade8_reading_yes];
 
 var layout2 = {
-    title: 'Average NAEP reading scale score of 8th graders,<br>by whether student has access to the Internet at home (2019).',
+    title: 'Average NAEP reading scale score of 8th-graders,<br>by whether student has access to the Internet at home (2019).',
     xaxis: {
-        autorange: true
+        autorange: true,
+        title: 'Reading scale score (0 - 500)'
     },
     showlegend: false,
 };

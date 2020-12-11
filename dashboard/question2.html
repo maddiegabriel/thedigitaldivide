@@ -148,6 +148,13 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="row no-gutters align-items-right">
+                                        <div class="col mr-2 align-items-right">
+                                            <div class="col-auto align-items-right">
+                                                <i class="fas fa-laptop fa-3x text-gray-300"></i>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -159,7 +166,15 @@
                                         <div class="col mr-2">
                                             <div class="h4 font-weight-bold text-warning mb-1">Academic Performance</div>
                                             <div class="h5 mb-0">
-                                                <br>is measured by average NAEP test scores.
+                                                <br>is measured by mean NAEP test scores.
+                                                <br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row no-gutters align-items-right">
+                                        <div class="col mr-2 mt-4 align-items-right">
+                                            <div class="col-auto align-items-right">
+                                                <i class="fas fa-medal fa-3x text-gray-300"></i>
                                             </div>
                                         </div>
                                     </div>
@@ -176,7 +191,7 @@
                                     <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                         <div class="card-header card-header-data py-3" id="headingOne">
                                             <h2 class="mb-0">
-                                                <h3 class="m-0 font-weight-bold text-primary">View Table of Data Means</h3>
+                                                <h3 class="m-0 font-weight-bold text-primary">View Table of Data</h3>
                                             </h2>
                                         </div>
                                     </button>
@@ -255,11 +270,11 @@
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="h4 font-weight-bold text-success text-uppercase mb-1">
+                                            <div class="h4 font-weight-bold text-success text-uppercase mb-0">
                                                 NAEP?</div>
                                             <div class="h6 mb-0">
                                                 <br>
-                                                The <a href="https://nces.ed.gov/nationsreportcard/about/" target="_blank"><b>NAEP</b></a> (National Assessment of Educational Progress) is a <b>standardized test</b> measuring the proficiency of U.S. students in various academic subjects. Commonly known as “The Nation’s Report Card”, this is a congressionally mandated project administered by the <b>U.S Department of Education</b>.
+                                                The <a href="https://nces.ed.gov/nationsreportcard/about/" target="_blank"><b>National Assessment of Educational Progress</b></a> is a <b>standardized test</b> measuring the proficiency of U.S. students in many academic subjects. Often called “The Nation’s Report Card”, it is administered by the <b>U.S Department of Education</b>.
                                             </div>
                                         </div>
                                     </div>
@@ -267,11 +282,11 @@
                             </div>
                         </div>
                         <div class="col-xl-8 col-md-6 mb-0">
-                            <div class="card shadow mb-4">
+                            <div class="card shadow mb-0">
                                 <div class="card-header py-3">
                                     <h5 class="h4 m-0 font-weight-bold text-primary">The Data</h5>
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body mb-1">
                                     <p>
                                         We examined the <b>2019 NAEP results</b> for <b>Grade 4 and 8</b> students at the <b>national</b> level. The dataset being examined is composed of the average NAEP test scores on a <b>scale from 0 to 500</b> in the subject areas of <b>Reading</b> and <b>Mathematics</b>. NAEP results are then reported for groups of students with similar characteristics (e.g. gender, race, home Internet access), not for individual students.
                                     </p>
@@ -288,13 +303,13 @@
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="h5 font-weight-bold text-info mb-1"><b>Methodology:</b> Idependent Samples T-Test</div>
-                                            <div class="h6 mb-0 text-gray-800">
+                                            <div class="h5 font-weight-bold text-info mb-1"><b>Methodology:</b> Independent Samples T-Test</div>
+                                            <div class="h6 mb-0 text-gray-600">
                                                 <br>
-                                                A <b>t-test</b> is a popular method of data analysis used to determine if the difference between two means is <b>statistically significant</b>.
+                                                A <a href="https://nces.ed.gov/nationsreportcard/tdw/analysis/infer_ttest_indep.aspx" target="_blank"><b>t-test</b></a> is a popular method of data analysis used to determine if the difference between two means is <b>statistically significant</b>.
                                                 We used an <b>independent samples t-test</b> to compare the mean NAEP subject scores of students in <b>two independent categories</b>: those who have Internet access at home and those who do not.
-                                                The response (<i>dependent variable</i>) is the students' mean NAEP test score.
-                                                We performed a separate test for each subject being studied: Mathematics and Reading. Using this method has allowed us to determine that the observed difference in mean academic performance did not happen by chance; the difference is significant and could be used to prove that digital access has an impact on academic performance.
+                                                The response (<i>dependent variable</i>) is the students' <b>mean NAEP test scores</b>.
+                                                We performed a separate t-test for each subject being studied: <b>Mathematics</b> and <b>Reading</b>.
                                             </div>
                                         </div>
                                     </div>
@@ -330,9 +345,12 @@
                                 <!-- Card Body -->
                                 <div class="card-body">
                                 	<p>
-                                        The p value for each of the following T-Tests was very small (p-value < 2.2e-16).
-                                        This shows that there is indeed a significant difference between the mean NAEP test scores of American students who have access to the Internet at home and students who do not. On average, the students with access to the Internet at home performed significantly better academically than those who do not. This finding was consistent across both subject areas studied (mathematics & reading), as well as all age groups studied (grades 4 & 8).
-                                         block represents those who do not. You can see that in each plot, the orange block is further to the right meaning that population category has a higher mean test score.
+                                        The <b>p value</b> for this t-test was very small (p-value < 2.2e-16).
+                                        This means that, for the 2019 NAEP reading assessment administered to 4th-grade students, there is indeed a <b>significant difference</b> between the mean test scores of students who have access to the Internet at home and students who do not.
+                                        On average, the students with access to the Internet at home performed significantly better academically than those who do not.
+                                        In the plot to the left, the orange block is higher on the reading scale score; this means that the population category of students with access to the Internet at home has a higher mean test score.
+                                         This method allowed us to determine that the observed difference in mean academic performance did not happen by chance; the difference is significant and could be used to prove that digital access has an impact on academic performance.
+
                                     </p>
                                 </div>
                             </div>
@@ -394,6 +412,30 @@
                         </div>
                     </div>
 
+                    <!-- REFERENCES -->
+                    <div class="row">
+                        <div class="col-xl-12 col-md-12 mb-4">
+                            <div class="card border-left-info shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="h5 font-weight-bold text-info mb-1">References</div>
+                                            <div class="mb-0 text-gray-600">
+                                                <p class="text-xs mb-0">
+                                                    <br>
+                                                    “About NAEP.” National Assessment of Educational Progress. 2020. <a href="https://nces.ed.gov/nationsreportcard/about/" target="_blank">https://nces.ed.gov/nationsreportcard/about/</a>.<br><br>
+                                                    “Average National Assessment of Educational Progress (NAEP) reading scale score and percentage distribution of 4th- and 8th-graders, by whether student has access to a computer or tablet and the Internet at home and other selected characteristics: 2019.” National Centre of Education Statistics. 2019. <a href="https://nces.ed.gov/programs/digest/d19/tables/dt19_221.35.asp?current=yes" target="_blank">https://nces.ed.gov/programs/digest/d19/tables/dt19_221.35.asp?current=yes</a>.<br><br>
+                                                    “Average National Assessment of Educational Progress (NAEP) mathematics scale score and percentage distribution of 4th- and 8th-graders, by whether student has access to a computer or tablet and the Internet at home and other selected characteristics: 2019.” National Centre of Education Statistics. 2019.<a href="https://nces.ed.gov/programs/digest/d19/tables/dt19_222.45.asp?current=yes" target="_blank">https://nces.ed.gov/programs/digest/d19/tables/dt19_222.45.asp?current=yes</a>.<br><br>
+                                                    Dabbs, Patricia. “NAEP Validity Studies: An Agenda for NAEP Validity Research”. U.S. Department of Education, National Center for Education Statistics, (2003): 1-75.<br><br>
+                                                    “t Test for Independent Groups.” National Centre for Education Statistics. 2008. <a href="https://nces.ed.gov/nationsreportcard/tdw/analysis/infer_ttest_indep.aspx" target="_blank">https://nces.ed.gov/nationsreportcard/tdw/analysis/infer_ttest_indep.aspx</a>.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- /.container-fluid -->
 

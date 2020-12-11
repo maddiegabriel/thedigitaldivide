@@ -92,3 +92,11 @@
 .page-header {
     margin-left: -16px;
 }
+
+.about-page-header {
+    margin-left: 0px;
+}
+
+.push-right {
+    margin-left: 0.7rem !important;
+}
