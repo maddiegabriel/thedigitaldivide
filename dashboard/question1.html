@@ -189,7 +189,7 @@
                         </div>
                     </div>
 
-                    <!-- Content Row -->
+                    <!-- Plots Row -->
 
                     <div class="row">
                         <div class="col-xl-12 col-lg-">
@@ -216,7 +216,7 @@
                         </div>
                     </div>
 
-                    <!-- Content Row -->
+                    <!-- Overview Row -->
                     <div class="row">
 
                         <!-- Content Column -->
@@ -286,7 +286,64 @@
                         </div>
                     </div>
 
-                    <!-- Content Row -->
+                    <!-- Source and Limitations Row -->
+                    <div class="row">
+
+                        <!--  Column -->
+                        <div class="col-lg-8 mb-4">
+
+                            <!-- Project Card Example -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h2 class="m-0 font-weight-bold text-primary">The Source</h2>
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="m-0 font-weight-bold text-secondary"> 
+                                        <a href="https://www23.statcan.gc.ca/imdb/p2SV.pl?Function=getSurvey&SDDS=4432#a2">Canadian Internet Usage Survey from Statistics Canada</a>
+                                    </h4>
+                                    <img style="width:60%" src="../img/StatCan.png"/>
+                                    <br/>
+                                    <h6 class="m-0 font-weight-bold text-green">Target population</h6>
+                                    <p>&emsp;* All persons 15 years of age and older living in the ten provinces of Canada.</p>
+                                    <br/>
+                                    <h6 class="m-0 font-weight-bold text-green">Data Collection</h6>
+                                    <p>&emsp;* Sample survey with a cross-sectional design<br/>
+                                        &emsp;* meaning multiple groups from different provinces, age groups, and household income quartiles were asked in similar proportions
+                                    </p>
+                                    <br/>
+                                    <h6 class="m-0 font-weight-bold text-green">Survey Design</h6>
+                                    <p>&emsp;* Responding to this survey is voluntary. <br/>
+                                        &emsp;* Data are collected directly from survey respondents. <br/>
+                                        &emsp;* Data are collected through an electronic questionnaire or computer assisted telephone interviewing<br/>
+                                    </p>
+                                    <br/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-4">
+
+                            <!-- Project Card Example -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h4 class="m-0 font-weight-bold text-pink">The Limitations</h4>
+                                </div>
+                                <div class="card-body">
+                                    <h6 class="m-0 font-weight-bold text-orange">Electronic Questionnaire to Evaluate Digital Access</h6>
+                                    <p>&emsp;* Collecting data digitally could skew response volume towards digitally active users <br/>
+                                    </p>
+                                    <br/>
+
+                                    <h6 class="m-0 font-weight-bold text-orange">Stratified Random Sampling</h6>
+                                    <p>&emsp;* To address the possible skew, the data is collected from each group independently. <br/> 
+                                        &emsp;* This keeps data volumes proportional by category and reduces variance <br/>
+                                    </p>
+                                    <img style="width: 100%" src="../img/StratifiedRandomSampling.jpg"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Analysis Row -->
                     <div class="row">
 
                         <!-- Content Column -->
@@ -313,18 +370,141 @@
                                     <h5>* Multionomial Logistic Regression is at heart a Classifer
                                         <br/>
                                         <br/>
-                                        *The scatter plot looks like there is a positive trend with
-                                        internet access and household income quartile
+                                        * The model trains itself on existing data, in our case: <br/>
+                                        &emsp; * Internet Access<br/>
+                                        &emsp; * Online Shopping Metrics<br/>
+                                        &emsp; * Social Networking Usage<br/>
                                         <br/>
-                                        <br/>
-                                        *We could probably draw a non-linear line of best fit through this data
+                                        * From this data it identifies patterns in what the data LOOKS like
+                                            when it comes from a certain category <br/> <br/>
+                                        * Once the model is trained, when new data is presented - in our case, the data would 
+                                            be the percentage of households in a geographical area
+                                            that have internet access at home - the model can calculate a percent chance that that region 
+                                            is a low, second, third, or highest income quartile area <br/> <br/>
+                                        * It will then categorize that data - select the highest percentage category - and give that answer back to us <br/> <br/>
                                     </h5>
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
+                    <!-- Walkthrough Row -->
+                    <div class="row">
+
+                        <!-- Content Column -->
+                        <div class="col-lg-8 mb-4">
+
+                            <!-- Project Card Example -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h4 class="m-0 font-weight-bold text-primary">A Walkthrough</h4>
+                                </div>
+                                <div class="card-body">
+                                    <h6 class="m-0 font-weight-bold text-primary"> We will walk through the digital access model using Internet Access </h6>
+
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <img style="width: 100%" src="../img/InternetAccessPlot.png">
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <h6 class="m-0 font-weight-bold text-green">The Goal</h6>
+                                            <p>
+                                                Use Multinomial logistic regression to create a model 
+                                                that takes the percentage of households 
+                                                in a geographical area that have internet access at home and calculates
+                                                if that region is a low, second, third, or highest income quartile area 
+                                            </p>
+                                            
+                                            <h6 class="m-0 font-weight-bold text-green">We use the Multinom function from the R package "nnet"</h6>
+                                            <p>
+                                                The multinom function trains the model based on the data provided in the scatter plot to the left
+                                            </p>
+                                            <p>
+                                                We know the model has trained itself adequately if it CONVERGES (meaning it has found a satisfying solution) within 100 iterations
+                                            </p>
+                                            <h6 class="m-0 font-weight-bold text-green">R Code</h6>
+
+                                            <p >
+                                                We use this R code to generate a model, that says "predict household income quartile based on internet access data"<br/>
+                                            </p>
+                                            <img src="../img/Converge.png"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-4">
+
+                            <!-- Project Card Example -->
+                            <div class="card shadow mb-4">
+
+                                <div class="card-body">
+                                    <h6 class="m-0 font-weight-bold text-green">Weights</h6>
+                                    <p>
+                                        Using the summary function from R, we can see the weights 
+                                        the model has determined through training
+                                    </p>
+                                    <p>
+                                        The weights are a vital component to determining the percent chance a new data point fits in a certain category
+                                    </p>
+                                    <img src="../img/Weights.png"/>
+                                    <h6 class="m-0 font-weight-bold text-green">Determining Accuracy: P-Values</h6>
+                                    <p>
+                                        P-Values are a metric used in statistic that tell the statistician: 
+                                    </p>
+                                    <p>
+                                        "Is this model, given the data it was trained on, good enough to make valid predictions"<br/>
+                                        P-values are considered significant when they are below 0.05
+                                    </p>
+                                    <img src="../img/PVals.png"/><br/>
+                                    <h6 class="m-0 font-weight-bold text-green">This indicates that our model is accurate</h6>
+                                    <p>
+                                        Given these P-values we may say "There is a statistically significant correlation between digital access and income quartile"
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- References Row -->
+                    <div class="row">
+                        <!-- Content Column -->
+                        <div class="col-lg-12">
+
+                            <!-- Project Card Example -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h2 class="m-0 font-weight-bold text-primary">References</h2>
+                                </div>
+                                <div class="card-body">
+                                    <p>
+                                        Thomas, Lauren. "What is a Cross-Sectional Study." Scribbr, last modified June 5, 2020.<br/>&emsp;
+                                        <a href="www.scribbr.com/methodology/cross-sectional-study/?fbclid=IwAR3W0hzWK5aKVi_w4TQHjXr5rnxxtgCvrP8vzSSN8QFUK8tanq1GKZhntlY">
+                                            www.scribbr.com/methodology/cross-sectional-study/?fbclid=IwAR3W0hzWK5aKVi_w4TQHjXr5rnxxtgCvrP8vzSSN8QFUK8tanq1GKZhntlY.
+                                        </a>
+                                    </p>
+                                    <p>
+                                        Polamuri, Saimadhu. “How the Multinomial Logistic Regression Model Works.” Open Data Science, published March 31, 2017.<br/>&emsp;
+                                        <a href="www.opendatascience.com/how-the-multinomial-logistic-regression-model-works/?fbclid=IwAR1IFF2QSkHMnSfa68J20Y-Hn7HsyNmO0ZSzkdeNTF-uO7R8HL1zEm6on6c">
+                                            www.opendatascience.com/how-the-multinomial-logistic-regression-model-works/?fbclid=IwAR1IFF2QSkHMnSfa68J20Y-Hn7HsyNmO0ZSzkdeNTF-uO7R8HL1zEm6on6c.
+                                        </a>
+                                    </p>
+                                    <p>
+                                        Xie, Wilson. “Multinomial Logistic Regression in a Nutshell.” Medium, published December 8, 2020.<br/>&emsp;
+                                        <a href="www.medium.com/ds3ucsd/multinomial-logistic-regression-in-a-nutshell-53c94b30448f">
+                                            www.medium.com/ds3ucsd/multinomial-logistic-regression-in-a-nutshell-53c94b30448f.
+                                        </a>
+                                    </p>
+                                    <p>
+                                        “Use of Internet services and technologies by age group and household income quartile,” <br>&emsp;
+                                        <a href="https://www150.statcan.gc.ca/t1/tbl1/en/cv.action?pid=2210011301">
+                                            Statistics Canada. 2020. https://www150.statcan.gc.ca/t1/tbl1/en/cv.action?pid=2210011301.
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- /.container-fluid -->
 
