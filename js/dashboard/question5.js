@@ -2,19 +2,24 @@
 Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
 Chart.defaults.global.defaultFontColor = '#858796';
 
-// Bar Chart Example
-var ctx = document.getElementById("q3BarChart");
+// Bar Chart QUESTION 4
+var ctx = document.getElementById("q5BarChart");
 var myBarChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ["Pre-Covid", "During Covid"],
-        datasets: [{
-            label: "Study Time",
-            backgroundColor: "#4e73df",
-            hoverBackgroundColor: "#2e59d9",
-            borderColor: "#4e73df",
-            data: [3.88, 4.58],
-        }],
+        labels: ["Low-Income", "Non Low-Income"],
+        datasets: [
+            {
+                label: "Before COVID-19",
+                backgroundColor: "#36b9cc",
+                data: [3.888, 5.361]
+            },
+            {
+                label: "During COVID-19",
+                backgroundColor: "#4e73df",
+                data: [4.575, 5.525]
+            }
+        ]
     },
     options: {
         maintainAspectRatio: false,
@@ -28,6 +33,10 @@ var myBarChart = new Chart(ctx, {
         },
         scales: {
             xAxes: [{
+                scaleLabel: {
+                    display: true,
+                    labelString: "Income Class"
+                },
                 time: {
                     unit: 'month'
                 },
@@ -38,7 +47,7 @@ var myBarChart = new Chart(ctx, {
                 ticks: {
                     maxTicksLimit: 6
                 },
-                maxBarThickness: 150,
+                maxBarThickness: 180,
             }],
             yAxes: [{
                 scaleLabel: {
@@ -50,10 +59,6 @@ var myBarChart = new Chart(ctx, {
                     max: 6,
                     maxTicksLimit: 10,
                     padding: 10,
-                    // Include a dollar sign in the ticks
-                    // callback: function(value, index, values) {
-                    //     return '$' + number_format(value);
-                    // }
                 },
                 gridLines: {
                     color: "rgb(234, 236, 244)",
@@ -65,7 +70,7 @@ var myBarChart = new Chart(ctx, {
             }],
         },
         legend: {
-            display: false
+            display: true
         },
         tooltips: {
             titleMarginBottom: 10,

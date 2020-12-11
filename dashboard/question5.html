@@ -18,7 +18,6 @@
     <!-- Custom styles for this template-->
     <link href="../css/sb-admin-2.css" rel="stylesheet">
     <link href="../css/our-style.css" rel="stylesheet">
-    <link href="../css/dashboard/q5.css" rel="stylesheet">
 
 </head>
 
@@ -138,11 +137,11 @@
                             </div>
                         </div>
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card border-left-info shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
                                                 High Income (Before COVID)</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">5.361 hours</div>
                                         </div>
@@ -173,11 +172,11 @@
                         </div>
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card border-left-info shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
                                                 High Income (During COVID)</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">5.525 hours</div>
                                         </div>
@@ -196,12 +195,11 @@
                     <div class="row justify-content-center">
 
                         <!-- Area Chart -->
-                        <div class="col-xl-8 col-lg-9">
+                        <div class="col-xl-12 col-lg-12">
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Time Spent Leaning Overview</h6>
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="h5 m-0 font-weight-bold text-primary">Time Spent Learning for Low-Income Students VS Non Low-Income Students, before VS during COVID-19.</h6>
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
@@ -213,61 +211,74 @@
                         </div>
                     </div>
                   
+                    <!-- METHOD SECTION -->
                     <div class="row">
-
-                            <!-- Content Column -->
-                            <div class="col-xl-8 col-lg-9">
-                                <!-- Methodology -->
-                                <div class="card shadow mb-4">
-                                    <div class="card-header py-3">
-                                        <h6 class="h4 m-0 font-weight-bold text-warning">Welch Two Sample T-Test</h6>
-                                    </div>
-                                    <div class="card-body">
-                                        <ul style="text-align:justify;">
-                                          <li>
-                                            For this question we will use a simple Welch Two Sample T-Test using the t.test() function in R.
-                                          </li>
-                                          
-                                          <li>
-                                            Our hypothesis will be that the academic performance for students of lower and
-                                            non-lower income households is the same.
-                                          </li>
-                                          <li>
-                                            We will conduct a two-sided test to cover all possibilities.
-                                          </li>
-                                          <li>
-                                            We will assume variances to be unequal because we are using data from two different
-                                            groups. Also we do not know if our variances are the same or not.
-                                          </li>
-                                          <li>
-                                            We will set our null hypothesis as 0. Which really means that our mean difference is 0.
-                                          </li>
-                                          <li>
-                                            For this t-test we will use 95% as our confidence interval.
-                                          </li>
-                                          <li>
-                                            For the results of this test, if our p-value is less than 0.05 we will assume that the mean for
-                                            two groups is significantly different. As such we will conclude that there is a statistically significant difference between the academic performance of students from lower income households versus the non-lower income households.
-                                          </li>
-                                          <li>
-                                            On the other hand if our p-value is equal to or greater than 0.05 we will conclude that there is no significant statistical difference between academic performance of students from lower income households versus non-lower income households.
-                                          </li>
-                                      </ul>
-                                    </div>
+                        <!-- Content Column -->
+                        <div class="col-xl-6 col-lg-9">
+                            <!-- Methodology -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="h4 m-0 font-weight-bold text-primary"><b>Method:</b> Welch Two Sample T-Test</h6>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li>
+                                        To compare the results from question 3 and 4, we used a <a href="https://sites.nicholas.duke.edu/statsreview/means/welch/" target="_blank"><b>Welch Two Sample T-Test</b></a>. We conducted a two-sided test in order to cover all possibilities. The data analysis was done in R.
+                                        </li>
+                                        <li>
+                                        Our null hypothesis was that there was <b>no difference</b> in academic performance between students of lower and non-lower income households, both before VS during COVID-19.
+                                        </li>
+                                        <li>
+                                        We assumed the variances to be unequal because we used data from two different groups and did not know if our variances are the same or not. For both t-tests, we operated under a 95% as confidence interval.
+                                        </li>
+                                        <li>
+                                        By the results of this two-sided t-test, we were able to use the p-value to conclude whether there is a <b>statistically significant difference</b> between the academic performance of students from lower income households VS the non-lower income households.
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-                  </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-9">
+                            <!-- Methodology -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="h4 m-0 font-weight-bold text-primary"><b>Demo:</b> Welch Two Sample T-Test</h6>
+                                </div>
+                                <div class="card-body">
+                                    <br>
+                                    <iframe width="525" height="320" src="https://www.youtube.com/embed/B_1cnwYn7so" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                                </div>
+                        </div>
+                    </div>
+                    
+                    <!-- T TEST 1 SECTION -->
+                    <div class="row">
+                        <!-- Content Column -->
+                        <div class="col-xl-12 col-lg-9">
+                            <!-- Methodology -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="h5 m-0 font-weight-bold text-info"><b>T-Test #1:</b> Before COVID-19</h6>
+                                </div>
+                                <div class="card-body">
+                                    <p>For the first t-test performed, we compared whether there was statistically significant difference between the learning times (hours per week) for students from non low-income families VS students from low-income families <b>prior to COVID-19</b>. The resulting p-value from this t-test was much less than the 0.05 threshold, thereby proving that the difference in learning time is indeed statistically significant.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  
 
-                    <!-- Content Row -->
-                    <div class="row justify-content-center">
+                     <!-- T TEST 1 CARDS SECTION -->
+                     <div class="row justify-content-center">
 
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card border-left-success shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-left">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                            <div class="text-s font-weight-bold text-success text-uppercase mb-1">
                                                 T-Value (T-Test #1)</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">5.197</div>
                                         </div>
@@ -278,11 +289,11 @@
 
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
+                            <div class="card border-left-warning shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-left">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-blue text-uppercase mb-1">
+                                            <div class="text-s font-weight-bold text-warning text-uppercase mb-1">
                                                 Degrees of Freedom</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">89.13</div>
                                         </div>
@@ -291,11 +302,11 @@
                             </div>
                         </div>
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card border-left-danger shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-left">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                            <div class="text-s font-weight-bold text-danger text-uppercase mb-1">
                                                 P-Value</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">1.274 x 10<sup>-06</sup></div>
                                         </div>
@@ -303,34 +314,33 @@
                                 </div>
                             </div>
                         </div>
+                    </div>       
 
-                    <!-- Content Row -->
-                  </div>
-                  <div class="row">
-
-                            <!-- Content Column -->
-                            <div class="col-xl-8 col-lg-9">
-                                <!-- Methodology -->
-                                <div class="card shadow mb-4">
-                                    <div class="card-header py-3">
-                                        <h6 class="h4 m-0 font-weight-bold text-info">T-Test #1</h6>
-                                    </div>
-                                    <div class="card-body">
-                                        <p style="text-align:justify;">For T-Test #1, we first compared whether there was statistically significant difference between the learning times for students from non low income families and students from low income families prior to COVID-19. As seen by the p-value which is much less than 0.05 the difference is statistically significant. </p>
-                                    </div>
+                    <!-- T TEST 2 SECTION -->
+                    <div class="row">
+                        <!-- Content Column -->
+                        <div class="col-xl-12 col-lg-9">
+                            <!-- Methodology -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="h5 m-0 font-weight-bold text-info"><b>T-Test #2:</b> During COVID-19</h6>
+                                </div>
+                                <div class="card-body">
+                                    <p>For the second t-test performed, we compared whether there was statistically significant difference between the learning times for students from non low income families and students from low income families <b>during COVID-19</b>. The resulting p-value from this t-test was much less than the 0.05 threshold, thereby proving that the difference in learning time is indeed statistically significant.</p>
                                 </div>
                             </div>
-                  </div>
-                  
-                  <div class="row justify-content-center">
+                        </div>
+                    </div>
 
+                    <!-- T TEST 2 CARDS SECTION -->
+                    <div class="row justify-content-center">
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card border-left-success shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-left">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                            <div class="text-s font-weight-bold text-success text-uppercase mb-1">
                                                 T-Value (T-Test #2)</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">3.462</div>
                                         </div>
@@ -341,11 +351,11 @@
 
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
+                            <div class="card border-left-warning shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-left">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-blue text-uppercase mb-1">
+                                            <div class="text-s font-weight-bold text-warning text-uppercase mb-1">
                                                 Degrees of Freedom</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">7.7427</div>
                                         </div>
@@ -354,11 +364,11 @@
                             </div>
                         </div>
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card border-left-danger shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-left">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                            <div class="text-s font-weight-bold text-danger text-uppercase mb-1">
                                                 P-Value</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">0.008985</div>
                                         </div>
@@ -366,103 +376,68 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                    <!-- Content Row -->
-                  </div>
-                  <div class="row">
-
-                            <!-- Content Column -->
-                            <div class="col-xl-8 col-lg-9">
-                                <!-- Methodology -->
-                                <div class="card shadow mb-4">
-                                    <div class="card-header py-3">
-                                        <h6 class="h4 m-0 font-weight-bold text-info">T-Test #2</h6>
-                                    </div>
-                                    <div class="card-body">
-                                        <p style="text-align:justify;">For T-Test #2, we first compared whether there was statistically significant difference between the learning times for students from non low income families and students from low income families during COVID-19. As seen by the p-value which is much less than 0.05 the difference is statistically significant. </p>
-                                    </div>
+                    <!-- RESULTS & LIMITATIONS SECTION -->
+                    <div class="row">
+                        <!-- Content Column -->
+                        <div class="col-xl-12 col-m-6">
+                            <!-- Methodology -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="h4 m-0 font-weight-bold text-primary">Results &amp; Analysis</h6>
+                                </div>
+                                <div class="card-body">
+                                    <p>
+                                        From the results of Question 4, we already know that there is no staistically significant change in the study time before and during COVID-19 for students from non low-income households.
+                                        However, when we conducted t-test #1 to find out whether there was a significant difference between the study times for students from low-income and non low-income families before COVID-19, we found the difference to to be significant.<br><br>
+                                        Next we conducted t-test #2 to find out if there was a significant statistical difference between the study times for low and non low-income families during COVID-19; this difference also turned out to be significant.
+                                        Although, we already know that there was no significant change in the study time for non low-income families during COVID-19 and prior to it. As such, we cannot fully conclude if low income families are more impacted by COVID-19 in terms of education; more data analysis is required.<br><br>
+                                        The purpose of conducting the two t-tests was to be able to compare the results of each analysis to see any changes in the values of the t-tests; the greater the t-value, the greater the stastical significance and the smaller the p-value, the greater the statistical significance.<br><br>
+                                        The t-value produced by t-test #2 is smaller than that of t-test #1, the p-value for t-test #2 is greater than the p-value for t-test #1. As such, we can conclude the stastical significance has decreased from t-test #1 to t-test #2; this should have increased according to our hypothesis. Due to these findings, we have to accept the null hypothesis and reject our alternate hypothesis that COVID-19 had a more significant impact on the learning time of students from low-income families, as compared to non low-income families.</p>
                                 </div>
                             </div>
-                  </div>
-                  
-                  <div class="row">
+                        </div>
+                    </div>
 
-                            <!-- Content Column -->
-                            <div class="col-xl-8 col-lg-9">
-                                <!-- Methodology -->
-                                <div class="card shadow mb-4">
-                                    <div class="card-header py-3">
-                                        <h6 class="h4 m-0 font-weight-bold text-warning">Results &amp; Analysis</h6>
-                                    </div>
-                                    <div class="card-body">
-                                        <p style="text-align:justify;">From question 4 we already know that there is no significant staistical change in the study time for students with non low income families. As such even though we consuducted t-test #1 to find out whether there was a stastical difference between the study times for student from low income and non low income families. Which turned out to be significant. Next we conducted t-test #2 to find out if there was a significant statistical difference between the study times for low and non low income families and it turned out to be significant. Although, we already know that there was no significant change in the study time for non low income families during COVID-19 and prior to it. As such, we cannot conclude that low income families are more impacted by COVID-19 in terms of education. The purpose of our conducting the 2 t-tests was to be able to compare the two test to see the cahnges in the values of the t-tests. Just to keep in mind that the greater the t-value the greater the stastical significance and the smaller the p-value the greater the statistical significance. The t-value for t-test #2 is smaller than for t-test #1 and the p-value for t-test #2 is greater than the p-value for t-test #1. As such, we can conclude the stastical significance has decreassed from t-test #1 to t-test #2 which should have increased atleast according to our hypothesis. Due to this we have to further reject our hypothesis that COVID-19 had a more significant impact on the education of students from lower income families than compared to non lower income families.</p>
-                                    </div>
+                    <!-- DATA Assumptions SECTION -->
+                    <div class="row">
+                        <!-- Content Column -->
+                        <div class="col-xl-12 col-lg-6">
+                            <!-- Methodology -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="h4 m-0 font-weight-bold text-primary">Data Limitations</h6>
+                                </div>
+                                <div class="card-body">
+                                    <p style="text-align:justify;">In terms of the data, our limitations are the same as the ones mentioned in Questions 3 and 4. As mentioned before, our datasets are very limited due to the fact that usually data is only made available for any given year after the year has ended (or at the very end of the year as a sort of reflection). Also, COVID-19 has given rise to new issues and challenges; as such, data regarding those issues and challenges isn’t readily available. The datasets that we have used for Questions 3 and 4 are taken from the UK; while there are a lot of similarities between Canada and the UK, there are also many differences. All this being said, a limitation of our data is that it may not fully reflect the situation in Canada.</p>
                                 </div>
                             </div>
-                  </div>
-                  
-                  <div class="row">
-
+                        </div>
+                    </div>
+                    
+                    <!-- REFERENCES SECTION -->
+                    <div class="row">
                             <!-- Content Column -->
-                            <div class="col-xl-8 col-lg-9">
+                            <div class="col-xl-12 col-lg-9">
                                 <!-- Methodology -->
                                 <div class="card shadow mb-4">
                                     <div class="card-header py-3">
-                                        <h6 class="h4 m-0 font-weight-bold text-primary" style="color:orangered !important">Data Limitations</h6>
+                                        <h6 class="h4 m-0 font-weight-bold text-info">References</h6>
                                     </div>
                                     <div class="card-body">
-                                        <p style="text-align:justify;">In terms of data our limitations are the same as the ones mentioned in questions 3 and 4. As mentioned before our datasets are very limited due to the fact that usually data is only made available for any given year after the year has ended or at the very end of the year as a sort of reflection. Also, COVID-19 has given rise to new issues and challenges as such data regarding those issues and challenges isn’t readily available. The datasets that we have used for questions 3 and 4 are taken from the UK and while there are a lot of similarities between Canada and the UK there are also many differences. As such, we fear that our data may not fully reflect the situation in Canada.</p>
-                                    </div>
-                                </div>
-                            </div>
-                  </div>
-                  
-                  <div class="row">
-
-                            <!-- Content Column -->
-                            <div class="col-xl-8 col-lg-9">
-                                <!-- Methodology -->
-                                <div class="card shadow mb-4">
-                                    <div class="card-header py-3">
-                                        <h6 class="h4 m-0 font-weight-bold text-primary" style="color:#d7b358 !important">Data Assumptions</h6>
-                                    </div>
-                                    <div class="card-body">
-                                        <p style="text-align:justify;">We have 2 data sets and we want to find out if the two are statistically different or not. As such using a t-test is our best option to try and understand how similar or different the two datasets are and what kind of conclusion we could draw from them. Furthermore, we are using the p-value of 0.05 to indicate whether the 2 groups of data are statistically different or not. Although 0.05 is a standard value used by a lot of researchers, it doesn’t give us a complete hundred percent guarantee that our conclusion is correct. Rather we have to assume that our conclusion is correct.</p>
-                                    </div>
-                                </div>
-                            </div>
-                  </div>
-                  
-                  <div class="row">
-
-                            <!-- Content Column -->
-                            <div class="col-xl-8 col-lg-9">
-                                <!-- Methodology -->
-                                <div class="card shadow mb-4">
-                                    <div class="card-header py-3">
-                                        <h6 class="h4 m-0 font-weight-bold text-primary" style="color:orangered !important">References &amp; Sources</h6>
-                                    </div>
-                                    <div class="card-body">
-                                        <p style="text-align:justify;">Andrew, Alison, et al. “Learning During the Lockdown: Real-Time Data on
-                                            Children’s Experiences during Home Learning.” <i>Institute for Financial
-                                                Studies</i>, (2020): 1-23. doi: 10.1920/BN.IFS.2020.BN0288.
+                                        <p class="text-xs">
+                                            Andrew, Alison, et al. “Learning During the Lockdown: Real-Time Data on Children’s Experiences during Home Learning.” <i>Institute for Financial Studies</i>, (2020): 1-23. doi: 10.1920/BN.IFS.2020.BN0288.
+                                            <br><br>
+                                           “Does Homework Perpetuate Inequalities in Education.” <i>Organisation for Economic Cooperation and Development</i>, (2012): 1-4. <a href="https://doi.org/10.1787/5jxrhqhtx2xt-en" target="_blank">https://doi.org/10.1787/5jxrhqhtx2xt-en</a>.<br><br>
+                                           Udacity. YouTube, YouTube, 23 Feb. 2015, <a href="www.youtube.com/watch?v=B_1cnwYn7so" target="_blank">www.youtube.com/watch?v=B_1cnwYn7so</a>.
                                         </p>
-                                        
-                                        <p style="text-align:justify;">
-                                          “Does Homework Perpetuate Inequalities in Education.” <i>Organisation for
-                                            Economic Cooperation and Development</i>, (2012): 1-4. https://doi.org/10.1787/5jxrhqhtx2xt-en.
-                                      </p>
                                     </div>
                                 </div>
                             </div>
-                  </div>
+                    </div>
                   
-
-                
-                <!-- /.container-fluid -->
-
             </div>
-            <!-- End of Main Content -->
 
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
@@ -472,13 +447,9 @@
                     </div>
                 </div>
             </footer>
-            <!-- End of Footer -->
 
         </div>
-        <!-- End of Content Wrapper -->
-
     </div>
-    <!-- End of Page Wrapper -->
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
@@ -498,13 +469,17 @@
 
     <!-- Page level plugins -->
     <script src="../vendor/chart.js/Chart.min.js"></script>
-    <script src="../js/dashboard/question4.js"></script>
+    <script src="../js/dashboard/question5.js"></script>
 
-    <!-- Page level custom scripts 
-    
-    <script src="../js/demo/chart-pie-demo.js"></script> -->
+    <!-- Page level custom scripts -->
+    <script src="../js/demo/chart-pie-demo.js"></script>
     <script src="../js/demo/chart-area-demo.js"></script>
-
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    
 </body>
 
 </html>
