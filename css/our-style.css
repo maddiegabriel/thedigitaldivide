@@ -79,6 +79,7 @@
 
 .sidebar-dark .nav-item .nav-link {
     color: white;
+    font-weight: bold;
 }
 
 .sidebar-dark .nav-item .nav-link i {
