@@ -108,7 +108,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between page-header">
-                        <h1 class="h1 mb-0 text-gray-800" style="color:coral !important">Question 5</h1>
+                        <h1 class="h1 mb-0 text-gray-800">Question 5</h1>
                     </div>
                     <div class="d-sm-flex align-items-center justify-content-between mt-0">
                     <h3 class="h3 mb-0 text-gray-500" style="text-align: justify;">
@@ -117,18 +117,34 @@
                     </div>
                     <br>
                     <hr>
-                    <!-- Content Row -->
-                    <div class="row justify-content-center">
 
+                    <!-- 4 TOP CARDS -->
+                    <div class="row justify-content-center">
                         <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                Low Income (Before COVID)</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">3.888 hours</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-clock fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-primary shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                High Income (During COVID)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">5.525 Hrs</div>
+                                                High Income (Before COVID)</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">5.361 hours</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-clock fa-2x text-gray-300"></i>
@@ -146,7 +162,7 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                                 Low Income (During COVID)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">4.575 Hrs</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">4.575 hours</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-clock fa-2x text-gray-300"></i>
@@ -155,32 +171,15 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-primary shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                High Income (Before COVID)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">5.361 Hrs</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-clock fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Low Income (Before COVID)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">3.888 Hrs</div>
+                                                High Income (During COVID)</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">5.525 hours</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-clock fa-2x text-gray-300"></i>
@@ -191,7 +190,9 @@
                         </div>
 
                     <!-- Content Row -->
-                  </div>
+                    </div>
+
+                    <!-- BAR GRAPH -->
                     <div class="row justify-content-center">
 
                         <!-- Area Chart -->
@@ -204,8 +205,8 @@
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
-                                    <div class="chart-area">
-                                        <img id="barGraph" src="../img/barGraph.png">
+                                    <div class="chart-bar">
+                                        <canvas id="q5BarChart"></canvas>
                                     </div>
                                 </div>
                             </div>
@@ -219,7 +220,7 @@
                                 <!-- Methodology -->
                                 <div class="card shadow mb-4">
                                     <div class="card-header py-3">
-                                        <h6 class="h4 m-0 font-weight-bold text-primary" style="color:#d7b358 !important">Welch Two Sample T-Test</h6>
+                                        <h6 class="h4 m-0 font-weight-bold text-warning">Welch Two Sample T-Test</h6>
                                     </div>
                                     <div class="card-body">
                                         <ul style="text-align:justify;">
@@ -312,7 +313,7 @@
                                 <!-- Methodology -->
                                 <div class="card shadow mb-4">
                                     <div class="card-header py-3">
-                                        <h6 class="h4 m-0 font-weight-bold text-primary" style="color:orangered!important">T-Test #1</h6>
+                                        <h6 class="h4 m-0 font-weight-bold text-info">T-Test #1</h6>
                                     </div>
                                     <div class="card-body">
                                         <p style="text-align:justify;">For T-Test #1, we first compared whether there was statistically significant difference between the learning times for students from non low income families and students from low income families prior to COVID-19. As seen by the p-value which is much less than 0.05 the difference is statistically significant. </p>
@@ -375,7 +376,7 @@
                                 <!-- Methodology -->
                                 <div class="card shadow mb-4">
                                     <div class="card-header py-3">
-                                        <h6 class="h4 m-0 font-weight-bold text-primary" style="color:orangered !important">T-Test #2</h6>
+                                        <h6 class="h4 m-0 font-weight-bold text-info">T-Test #2</h6>
                                     </div>
                                     <div class="card-body">
                                         <p style="text-align:justify;">For T-Test #2, we first compared whether there was statistically significant difference between the learning times for students from non low income families and students from low income families during COVID-19. As seen by the p-value which is much less than 0.05 the difference is statistically significant. </p>
@@ -391,7 +392,7 @@
                                 <!-- Methodology -->
                                 <div class="card shadow mb-4">
                                     <div class="card-header py-3">
-                                        <h6 class="h4 m-0 font-weight-bold text-primary" style="color:#d7b358 !important">Results &amp; Analysis</h6>
+                                        <h6 class="h4 m-0 font-weight-bold text-warning">Results &amp; Analysis</h6>
                                     </div>
                                     <div class="card-body">
                                         <p style="text-align:justify;">From question 4 we already know that there is no significant staistical change in the study time for students with non low income families. As such even though we consuducted t-test #1 to find out whether there was a stastical difference between the study times for student from low income and non low income families. Which turned out to be significant. Next we conducted t-test #2 to find out if there was a significant statistical difference between the study times for low and non low income families and it turned out to be significant. Although, we already know that there was no significant change in the study time for non low income families during COVID-19 and prior to it. As such, we cannot conclude that low income families are more impacted by COVID-19 in terms of education. The purpose of our conducting the 2 t-tests was to be able to compare the two test to see the cahnges in the values of the t-tests. Just to keep in mind that the greater the t-value the greater the stastical significance and the smaller the p-value the greater the statistical significance. The t-value for t-test #2 is smaller than for t-test #1 and the p-value for t-test #2 is greater than the p-value for t-test #1. As such, we can conclude the stastical significance has decreassed from t-test #1 to t-test #2 which should have increased atleast according to our hypothesis. Due to this we have to further reject our hypothesis that COVID-19 had a more significant impact on the education of students from lower income families than compared to non lower income families.</p>
@@ -497,6 +498,7 @@
 
     <!-- Page level plugins -->
     <script src="../vendor/chart.js/Chart.min.js"></script>
+    <script src="../js/dashboard/question4.js"></script>
 
     <!-- Page level custom scripts 
     
