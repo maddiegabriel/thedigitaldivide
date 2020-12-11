@@ -1,5 +1,5 @@
 #our-logo {
-    max-width: 14rem;
+    max-width: 12rem;
 }
 
 .page-header {
@@ -35,6 +35,19 @@
     width: 100%;
 }
 
+.card-header-data {
+    background-color: #ffffff !important;
+    border-bottom: none;
+}
+
+#chart-container {
+    height: 400px; 
+}
+
+.thead-light th {
+    background-color: #f5f7ff !important;
+}
+
 .border-left-pink {
     border-left: 0.25rem solid #e83e8c !important;
 }
@@ -62,4 +75,29 @@
 }
 .text-blue {
     color: #36b9cc !important;
+}
+
+.sidebar-dark .nav-item .nav-link {
+    color: white;
+    font-weight: bold;
+}
+
+.sidebar-dark .nav-item .nav-link i {
+    color: white;   
+}
+
+.container-fluid {
+    padding-left: 2.5rem;
+}
+
+.page-header {
+    margin-left: -16px;
+}
+
+.about-page-header {
+    margin-left: 0px;
+}
+
+.push-right {
+    margin-left: 0.7rem !important;
 }
