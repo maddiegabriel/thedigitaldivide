@@ -101,3 +101,7 @@
 .push-right {
     margin-left: 0.7rem !important;
 }
+
+.sidebar {
+    width: 18rem !important;
+}

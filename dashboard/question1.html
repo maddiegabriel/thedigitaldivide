@@ -80,7 +80,7 @@
 
             <!-- Nav Item - Help -->
             <li class="nav-item active">
-                <a class="nav-link" href="help.html">
+                <a class="nav-link" href="../help.html">
                     <i class="fas fa-hands-helping"></i>
                     <span>You can Help!</span></a>
             </li>
@@ -229,11 +229,10 @@
                                 </div>
                                 <div class="card-body h5">
                                     <ul>
-                                        <li>The Internet Access data looks promising</li>
-                                        <li>This data is used to measure digital access</li>
+                                        <li>The Internet Access data looks promising. It is used to measure digital access</li>
                                         <li>The scatter plot seems to show a <b>positive trend</b> between
                                         internet access and household income quartile for Canadians over 15 years of age</li>
-                                        <li>We could probably draw a non-linear line of best fit through this data. Keep reading to see what we did with it!</li>
+                                        <li>We could probably draw a non-linear line of best fit through this data. Keep reading to see what we did!</li>
                                     </ul>
                                 </div>
                             </div>
@@ -378,10 +377,10 @@
                             <!-- Project Card Example -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h4 class="m-0 font-weight-bold text-primary">A Walkthrough</h4>
+                                    <h4 class="m-0 font-weight-bold text-primary">Multinomial Logistic Regression: A Walkthrough</h4>
                                 </div>
                                 <div class="card-body">
-                                    <h6 class="m-0 font-weight-bold text-primary"> We will walk through the digital access model using Internet Access </h6>
+                                    <h6 class="m-0 font-weight-bold"> We will walk through the digital access model using the Internet Access data.</h6><br>
 
                                     <div class="row">
                                         <div class="col-lg-6">
@@ -390,26 +389,30 @@
                                         <div class="col-lg-6">
                                             <h6 class="m-0 font-weight-bold text-green">The Goal</h6>
                                             <p>
-                                                Use Multinomial logistic regression to create a model 
+                                                To use Multinomial logistic regression to create a model 
                                                 that takes the percentage of households 
-                                                in a geographical area that have internet access at home and calculates
+                                                in a geographical area which have internet access at home and calculates
                                                 if that region is a low, second, third, or highest income quartile area 
                                             </p>
-                                            
-                                            <h6 class="m-0 font-weight-bold text-green">We use the Multinom function from the R package "nnet"</h6>
+            
+                                            <h6 class="m-0 font-weight-bold text-green">The Function</h6>
                                             <p>
-                                                The multinom function trains the model based on the data provided in the scatter plot to the left
+                                                We use the <i>multinom</i> function from the R package "nnet". This function trains the model based on the data in the scatter plot to the left.
                                             </p>
                                             <p>
                                                 We know the model has trained itself adequately if it CONVERGES (meaning it has found a satisfying solution) within 100 iterations
                                             </p>
-                                            <h6 class="m-0 font-weight-bold text-green">R Code</h6>
-
-                                            <p >
-                                                We use this R code to generate a model, that says "predict household income quartile based on internet access data"<br/>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <h6 class="m-0 ml-4 font-weight-bold text-green">R Code</h6>
+                                            <p class="ml-4">
+                                                We use this R code to <b>generate a model</b>.
+                                                The model we generate says "predict household income quartile based on internet access data".<br/>
                                             </p>
-                                            <img src="../img/Converge.png"/>
+                                            <img class="ml-4" src="../img/Converge.png"/>
                                         </div>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
@@ -422,25 +425,21 @@
                                 <div class="card-body">
                                     <h6 class="m-0 font-weight-bold text-green">Weights</h6>
                                     <p>
-                                        Using the summary function from R, we can see the weights 
-                                        the model has determined through training
-                                    </p>
-                                    <p>
-                                        The weights are a vital component to determining the percent chance a new data point fits in a certain category
+                                        Using the summary function from R, we can see the <b>weights</b>
+                                        the model has determined through training.
+                                        The weights are a vital component to determining the percent chance a new data point fits in a certain category.
                                     </p>
                                     <img src="../img/Weights.png"/>
-                                    <h6 class="m-0 font-weight-bold text-green">Determining Accuracy: P-Values</h6>
+                                    <br><br><h6 class="m-0 font-weight-bold text-green">Determining Accuracy: P-Values</h6>
                                     <p>
-                                        P-Values are a metric used in statistic that tell the statistician: 
+                                        <b>P-Values</b> are a metric used in statistic that tell the statistician: 
+                                        "Is this model, given the data it was trained on, good enough to make valid predictions"
+                                        P-values are considered significant when they are <b>below 0.05</b>.
                                     </p>
+                                    <img src="../img/PVals.png"/><br/><br>
+                                    <br><h6 class="m-0 font-weight-bold text-green">This indicates that our model is accurate</h6>
                                     <p>
-                                        "Is this model, given the data it was trained on, good enough to make valid predictions"<br/>
-                                        P-values are considered significant when they are below 0.05
-                                    </p>
-                                    <img src="../img/PVals.png"/><br/>
-                                    <h6 class="m-0 font-weight-bold text-green">This indicates that our model is accurate</h6>
-                                    <p>
-                                        Given these P-values we may say "There is a statistically significant correlation between digital access and income quartile"
+                                        Given these P-values, we may say "There is a <b>statistically significant correlation</b> between <b>digital access</b> and <b>income quartile</b>".
                                     </p>
                                 </div>
                             </div>
