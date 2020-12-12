@@ -1,6 +1,5 @@
-# CIS*4020 Data Science: Group 5
+# CIS*4020 Data Science: Group 5 Dashboard
 ## COVID-19 and the Digital Divide in Education
-### Assignment 4 (Dashboard)
 
 ## Access our dashboard online:
 https://www.maddieg.ca/thedigitaldivide/
